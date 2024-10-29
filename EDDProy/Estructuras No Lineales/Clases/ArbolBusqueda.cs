@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,19 +34,28 @@ namespace EDDemo.Estructuras_No_Lineales
         }
 
         public void InsertaNodo(int Dato, ref NodoBinario Nodo)
-        {            
-            if (Nodo == null)
+        {     
+            if (Busqueda (Dato, Raiz) == true)
             {
-                Nodo = new NodoBinario(Dato);
-                // CAMBIO 2
-
-                if (Raiz == null)
-                    Raiz = Nodo;
+                MessageBox.Show("El arbol esta vacio");
+                return;
             }
-            else if (Dato < Nodo.Dato)
-                InsertaNodo(Dato, ref Nodo.Izq);
-            else if (Dato > Nodo.Dato)
-                InsertaNodo(Dato, ref Nodo.Der);          
+            else
+            {
+                if (Nodo == null)
+                {
+                    Nodo = new NodoBinario(Dato);
+                    // CAMBIO 2
+
+                    if (Raiz == null)
+                        Raiz = Nodo;
+                }
+                else if (Dato < Nodo.Dato)
+                    InsertaNodo(Dato, ref Nodo.Izq);
+                else if (Dato > Nodo.Dato)
+                    InsertaNodo(Dato, ref Nodo.Der);
+            }
+                      
         }
         public void MuestraArbolAcostado(int nivel, NodoBinario nodo )
         {
@@ -111,6 +121,37 @@ namespace EDDemo.Estructuras_No_Lineales
 
             return;
          }
+        public Boolean Busqueda (int Valor, NodoBinario Nodo)
+        {
+           if (Nodo== null)
+                return false;
+            if (Valor < Nodo.Dato)
+                return
+           Busqueda(Valor, Nodo.Izq);
+            if (Valor > Nodo.Dato) return
+                    Busqueda(Valor,Nodo.Der);
+            return true;
+        }
+        public void BuscaNodo (int Valor)
+        {
+            if (Raiz == null)
+            {
+                MessageBox.Show("El arbol esta vacio");
+                return;
+            }
+            NodoBinario miRaiz = Raiz;
+            if (Busqueda(Valor, miRaiz) == true)
+            {
+                MessageBox.Show("Se ha encontrado el dato");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Valor no encontrado");
+                return;
+            }
+
+        }
 
     }
 }

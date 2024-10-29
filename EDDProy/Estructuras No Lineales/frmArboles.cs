@@ -173,5 +173,10 @@ namespace EDDemo.Estructuras_No_Lineales
             txtDato.Text = "";
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            miArbol.BuscaNodo(int.Parse(txtDato.Text));
+        }
     }
 }
