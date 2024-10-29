@@ -50,6 +50,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // txtDato
             // 
+            this.txtDato.BackColor = System.Drawing.Color.MediumTurquoise;
             this.txtDato.Location = new System.Drawing.Point(42, 16);
             this.txtDato.Margin = new System.Windows.Forms.Padding(2);
             this.txtDato.Multiline = true;
@@ -59,13 +60,14 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnAgregar.Location = new System.Drawing.Point(104, 16);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(62, 24);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Insertar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // txtArbol
@@ -85,36 +87,39 @@ namespace EDDemo.Estructuras_No_Lineales
             // btnLimpiar
             // 
             this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnLimpiar.Location = new System.Drawing.Point(733, 11);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(62, 24);
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGrafica
             // 
             this.btnGrafica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGrafica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnGrafica.Location = new System.Drawing.Point(733, 50);
             this.btnGrafica.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrafica.Name = "btnGrafica";
             this.btnGrafica.Size = new System.Drawing.Size(62, 24);
             this.btnGrafica.TabIndex = 3;
             this.btnGrafica.Text = "Grafica";
-            this.btnGrafica.UseVisualStyleBackColor = true;
+            this.btnGrafica.UseVisualStyleBackColor = false;
             this.btnGrafica.Click += new System.EventHandler(this.btnGrafica_Click);
             // 
             // btnRecorrer
             // 
+            this.btnRecorrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnRecorrer.Location = new System.Drawing.Point(104, 85);
             this.btnRecorrer.Margin = new System.Windows.Forms.Padding(2);
             this.btnRecorrer.Name = "btnRecorrer";
             this.btnRecorrer.Size = new System.Drawing.Size(62, 32);
             this.btnRecorrer.TabIndex = 4;
             this.btnRecorrer.Text = "Recorrer";
-            this.btnRecorrer.UseVisualStyleBackColor = true;
+            this.btnRecorrer.UseVisualStyleBackColor = false;
             this.btnRecorrer.Click += new System.EventHandler(this.btnRecorrer_Click);
             // 
             // lblDatos
@@ -129,17 +134,19 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnCrearArbol
             // 
+            this.btnCrearArbol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCrearArbol.Location = new System.Drawing.Point(104, 48);
             this.btnCrearArbol.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearArbol.Name = "btnCrearArbol";
             this.btnCrearArbol.Size = new System.Drawing.Size(62, 34);
             this.btnCrearArbol.TabIndex = 6;
             this.btnCrearArbol.Text = "Crear Arbol";
-            this.btnCrearArbol.UseVisualStyleBackColor = true;
+            this.btnCrearArbol.UseVisualStyleBackColor = false;
             this.btnCrearArbol.Click += new System.EventHandler(this.btnCrearArbol_Click);
             // 
             // txtNodos
             // 
+            this.txtNodos.BackColor = System.Drawing.Color.Turquoise;
             this.txtNodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNodos.Location = new System.Drawing.Point(40, 54);
             this.txtNodos.Margin = new System.Windows.Forms.Padding(2);
@@ -190,6 +197,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblPreOrden
             // 
             this.lblPreOrden.AutoSize = true;
+            this.lblPreOrden.BackColor = System.Drawing.SystemColors.Control;
             this.lblPreOrden.Location = new System.Drawing.Point(178, 69);
             this.lblPreOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPreOrden.Name = "lblPreOrden";
@@ -219,12 +227,13 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.Location = new System.Drawing.Point(189, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 21);
             this.button1.TabIndex = 15;
             this.button1.Text = "Buscar \r\n\r\n";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmArboles
