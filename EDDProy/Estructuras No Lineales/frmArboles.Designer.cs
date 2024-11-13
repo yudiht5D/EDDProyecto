@@ -45,6 +45,17 @@ namespace EDDemo.Estructuras_No_Lineales
             this.lblRecorridoInOrden = new System.Windows.Forms.Label();
             this.lblRecorridoPreOrden = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEliminar = new System.Windows.Forms.TextBox();
+            this.btnEliminarScsr = new System.Windows.Forms.Button();
+            this.btnEliminarPrdcsr = new System.Windows.Forms.Button();
+            this.btnVerificar = new System.Windows.Forms.Button();
+            this.lblAltura = new System.Windows.Forms.Label();
+            this.txtAltura = new System.Windows.Forms.TextBox();
+            this.lblNumNodos = new System.Windows.Forms.Label();
+            this.txtNumNodos = new System.Windows.Forms.TextBox();
+            this.lblHojas = new System.Windows.Forms.Label();
+            this.txtHojas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,19 +87,19 @@ namespace EDDemo.Estructuras_No_Lineales
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtArbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArbol.Location = new System.Drawing.Point(6, 198);
+            this.txtArbol.Location = new System.Drawing.Point(0, 232);
             this.txtArbol.Margin = new System.Windows.Forms.Padding(2);
             this.txtArbol.Multiline = true;
             this.txtArbol.Name = "txtArbol";
             this.txtArbol.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtArbol.Size = new System.Drawing.Size(804, 393);
+            this.txtArbol.Size = new System.Drawing.Size(862, 359);
             this.txtArbol.TabIndex = 2;
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLimpiar.Location = new System.Drawing.Point(733, 11);
+            this.btnLimpiar.Location = new System.Drawing.Point(75, 204);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(62, 24);
@@ -101,7 +112,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             this.btnGrafica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGrafica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnGrafica.Location = new System.Drawing.Point(733, 50);
+            this.btnGrafica.Location = new System.Drawing.Point(788, 204);
             this.btnGrafica.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrafica.Name = "btnGrafica";
             this.btnGrafica.Size = new System.Drawing.Size(62, 24);
@@ -236,11 +247,141 @@ namespace EDDemo.Estructuras_No_Lineales
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(519, 48);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 17);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Dato que desea eliminar";
+            // 
+            // txtEliminar
+            // 
+            this.txtEliminar.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.txtEliminar.Location = new System.Drawing.Point(576, 84);
+            this.txtEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEliminar.Multiline = true;
+            this.txtEliminar.Name = "txtEliminar";
+            this.txtEliminar.Size = new System.Drawing.Size(52, 26);
+            this.txtEliminar.TabIndex = 35;
+            // 
+            // btnEliminarScsr
+            // 
+            this.btnEliminarScsr.BackColor = System.Drawing.Color.Pink;
+            this.btnEliminarScsr.Location = new System.Drawing.Point(603, 119);
+            this.btnEliminarScsr.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarScsr.Name = "btnEliminarScsr";
+            this.btnEliminarScsr.Size = new System.Drawing.Size(100, 24);
+            this.btnEliminarScsr.TabIndex = 36;
+            this.btnEliminarScsr.Text = "Eliminar sucesor";
+            this.btnEliminarScsr.UseVisualStyleBackColor = false;
+            this.btnEliminarScsr.Click += new System.EventHandler(this.btnEliminarScsr_Click);
+            // 
+            // btnEliminarPrdcsr
+            // 
+            this.btnEliminarPrdcsr.BackColor = System.Drawing.Color.LightPink;
+            this.btnEliminarPrdcsr.Location = new System.Drawing.Point(488, 119);
+            this.btnEliminarPrdcsr.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarPrdcsr.Name = "btnEliminarPrdcsr";
+            this.btnEliminarPrdcsr.Size = new System.Drawing.Size(116, 24);
+            this.btnEliminarPrdcsr.TabIndex = 37;
+            this.btnEliminarPrdcsr.Text = "Eliminar predecesor";
+            this.btnEliminarPrdcsr.UseVisualStyleBackColor = false;
+            this.btnEliminarPrdcsr.Click += new System.EventHandler(this.btnEliminarPrdcsr_Click);
+            // 
+            // btnVerificar
+            // 
+            this.btnVerificar.BackColor = System.Drawing.Color.Pink;
+            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnVerificar.Location = new System.Drawing.Point(694, 11);
+            this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(131, 24);
+            this.btnVerificar.TabIndex = 38;
+            this.btnVerificar.Text = "Verificar árbol";
+            this.btnVerificar.UseVisualStyleBackColor = false;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
+            // 
+            // lblAltura
+            // 
+            this.lblAltura.AutoSize = true;
+            this.lblAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAltura.Location = new System.Drawing.Point(741, 37);
+            this.lblAltura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAltura.Name = "lblAltura";
+            this.lblAltura.Size = new System.Drawing.Size(49, 17);
+            this.lblAltura.TabIndex = 39;
+            this.lblAltura.Text = "Altura:";
+            // 
+            // txtAltura
+            // 
+            this.txtAltura.BackColor = System.Drawing.Color.Pink;
+            this.txtAltura.Location = new System.Drawing.Point(740, 54);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.ReadOnly = true;
+            this.txtAltura.Size = new System.Drawing.Size(50, 20);
+            this.txtAltura.TabIndex = 40;
+            // 
+            // lblNumNodos
+            // 
+            this.lblNumNodos.AutoSize = true;
+            this.lblNumNodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblNumNodos.Location = new System.Drawing.Point(683, 84);
+            this.lblNumNodos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumNodos.Name = "lblNumNodos";
+            this.lblNumNodos.Size = new System.Drawing.Size(90, 17);
+            this.lblNumNodos.TabIndex = 41;
+            this.lblNumNodos.Text = "Num. Nodos:";
+            // 
+            // txtNumNodos
+            // 
+            this.txtNumNodos.BackColor = System.Drawing.Color.Pink;
+            this.txtNumNodos.Location = new System.Drawing.Point(708, 105);
+            this.txtNumNodos.Name = "txtNumNodos";
+            this.txtNumNodos.ReadOnly = true;
+            this.txtNumNodos.Size = new System.Drawing.Size(50, 20);
+            this.txtNumNodos.TabIndex = 42;
+            // 
+            // lblHojas
+            // 
+            this.lblHojas.AutoSize = true;
+            this.lblHojas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblHojas.Location = new System.Drawing.Point(777, 85);
+            this.lblHojas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHojas.Name = "lblHojas";
+            this.lblHojas.Size = new System.Drawing.Size(85, 17);
+            this.lblHojas.TabIndex = 43;
+            this.lblHojas.Text = "Num. Hojas:";
+            // 
+            // txtHojas
+            // 
+            this.txtHojas.BackColor = System.Drawing.Color.Pink;
+            this.txtHojas.Location = new System.Drawing.Point(788, 105);
+            this.txtHojas.Name = "txtHojas";
+            this.txtHojas.ReadOnly = true;
+            this.txtHojas.Size = new System.Drawing.Size(50, 20);
+            this.txtHojas.TabIndex = 44;
+            // 
             // frmArboles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 481);
+            this.BackColor = System.Drawing.Color.Snow;
+            this.ClientSize = new System.Drawing.Size(861, 481);
+            this.Controls.Add(this.txtHojas);
+            this.Controls.Add(this.lblHojas);
+            this.Controls.Add(this.txtNumNodos);
+            this.Controls.Add(this.lblNumNodos);
+            this.Controls.Add(this.txtAltura);
+            this.Controls.Add(this.lblAltura);
+            this.Controls.Add(this.btnVerificar);
+            this.Controls.Add(this.btnEliminarPrdcsr);
+            this.Controls.Add(this.btnEliminarScsr);
+            this.Controls.Add(this.txtEliminar);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblRecorridoPreOrden);
             this.Controls.Add(this.lblRecorridoInOrden);
@@ -259,7 +400,7 @@ namespace EDDemo.Estructuras_No_Lineales
             this.Controls.Add(this.txtDato);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmArboles";
-            this.Text = "frmArboles";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -284,5 +425,16 @@ namespace EDDemo.Estructuras_No_Lineales
         private System.Windows.Forms.Label lblRecorridoInOrden;
         private System.Windows.Forms.Label lblRecorridoPreOrden;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtEliminar;
+        private System.Windows.Forms.Button btnEliminarScsr;
+        private System.Windows.Forms.Button btnEliminarPrdcsr;
+        private System.Windows.Forms.Button btnVerificar;
+        private System.Windows.Forms.Label lblAltura;
+        private System.Windows.Forms.TextBox txtAltura;
+        private System.Windows.Forms.Label lblNumNodos;
+        private System.Windows.Forms.TextBox txtNumNodos;
+        private System.Windows.Forms.Label lblHojas;
+        private System.Windows.Forms.TextBox txtHojas;
     }
 }
