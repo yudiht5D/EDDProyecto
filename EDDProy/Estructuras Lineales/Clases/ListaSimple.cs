@@ -5,24 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EDDemo
+namespace EDDemo.Estructuras_Lineales.Clases
 {
-    class Listas
+    internal class Listas
     {
-        internal Nodo inicio;
-        internal int tamaño;
-
-        public void Insertar()
-        {
-            Nodo Nuevo = new Nodo();
-            Nuevo.sig = null;
-
-
-        }
-        public int Total()
-        {
-            return tamaño;
-        }
+        public Nodo inicio;
+        public int tamaño;
         public Listas()
         {
             inicio = null;
@@ -242,6 +230,7 @@ namespace EDDemo
             tamaño = 0;
             return true;
         }
+      
 
         // Función para mostrar los elementos dentro de la lista
         public string Mostrar()
@@ -261,5 +250,11 @@ namespace EDDemo
             return res.ToString().TrimEnd();
         }
 
+
+        // Esto muestra la cantidad total de elementos dentro de la lista
+        public int Total()
+        {
+            return tamaño;
+        }
     }
 }
