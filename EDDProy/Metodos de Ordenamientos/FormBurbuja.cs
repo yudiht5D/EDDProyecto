@@ -30,7 +30,7 @@ namespace EDDemo.Metodos_de_Ordenamientos
 
                 for (int i = 0; i < cantidad; i++)
                 {
-                    int numero = random.Next(1, 100);
+                    int numero = random.Next(-101, 101);
 
                     if (i > 0)
                     {
@@ -73,5 +73,10 @@ namespace EDDemo.Metodos_de_Ordenamientos
 
             txtTiempo.Text = $"{stopwatch.ElapsedTicks} ticks";
         }
+        public class
+        {
+
+        }
     }
+
 }

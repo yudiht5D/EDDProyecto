@@ -164,7 +164,14 @@
       <DependentUpon>FormShellsort.cs</DependentUpon>
     </Compile>
     <Compile Include="Metodos de Ordenamientos\MezclaDirecta.cs" />
+    <Compile Include="MetodosdeBusqueda\FormHash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetodosdeBusqueda\FormHash.Designer.cs">
+      <DependentUpon>FormHash.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetodosdeBusqueda\ListaSimple.cs" />
+    <Compile Include="MetodosdeBusqueda\MetodoHash.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursividad\FormArreglo.cs">
@@ -235,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Metodos de Ordenamientos\FormShellsort.resx">
       <DependentUpon>FormShellsort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetodosdeBusqueda\FormHash.resx">
+      <DependentUpon>FormHash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

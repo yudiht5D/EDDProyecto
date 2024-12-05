@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDemo.Estructuras_No_Lineales;
 using EDDemo.Metodos_de_Ordenamientos;
+using EDDemo.MetodosdeBusqueda;
 using EDDemo.Recursividad;
 
 namespace EDDemo
@@ -139,6 +140,13 @@ namespace EDDemo
             FormShellsort mShellsort = new FormShellsort();
             mShellsort.MdiParent = this;
             mShellsort.Show();
+        }
+
+        private void hashToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHash mHash = new FormHash();
+            mHash.MdiParent = this;
+            mHash.Show();
         }
     }
 }

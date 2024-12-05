@@ -30,6 +30,32 @@ namespace EDDemo.Recursividad
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+        private double SumarArreglo(double[] arreglo)
+        {
+            numOperaciones++;
+
+            // Caso base: Si el arreglo está vacío, la suma es 0
+            if (arreglo.Length == 0)
+            {
+                return 0;
+            }
+
+            // Caso recursivo: Sumar el primer elemento con la suma del resto del arreglo
+            return arreglo[0] + SumarArreglo(SubArray(arreglo, 1));
+        }
+
+        private double[] SubArray(double[] arreglo, int start)
+        {
+            // Crear un subarreglo a partir del índice especificado
+            double[] result = new double[arreglo.Length - start];
+            Array.Copy(arreglo, start, result, 0, result.Length);
+            return result;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 // Leer los números introducidos en el TextBox y separarlos por comas
@@ -60,27 +86,6 @@ namespace EDDemo.Recursividad
                 textBox4.Text = "";
                 textBox3.Text = "";
             }
-        }
-        private double SumarArreglo(double[] arreglo)
-        {
-            numOperaciones++;
-
-            // Caso base: Si el arreglo está vacío, la suma es 0
-            if (arreglo.Length == 0)
-            {
-                return 0;
-            }
-
-            // Caso recursivo: Sumar el primer elemento con la suma del resto del arreglo
-            return arreglo[0] + SumarArreglo(SubArray(arreglo, 1));
-        }
-
-        private double[] SubArray(double[] arreglo, int start)
-        {
-            // Crear un subarreglo a partir del índice especificado
-            double[] result = new double[arreglo.Length - start];
-            Array.Copy(arreglo, start, result, 0, result.Length);
-            return result;
         }
     }
 }
