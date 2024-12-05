@@ -13,6 +13,7 @@ namespace EDDemo.Estructuras_Lineales
 {
     public partial class FormListasSimples : Form
     {
+        //Programa
         private Listas lista = new Listas();
         public FormListasSimples()
         {
